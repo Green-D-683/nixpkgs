@@ -34732,6 +34732,8 @@ with pkgs;
 
   x2vnc = callPackage ../tools/X11/x2vnc { };
 
+  x-air-edit = callPackage ../applications/audio/midas/x-air-edit.nix { };
+
   x32edit = callPackage ../applications/audio/midas/x32edit.nix { };
 
   x42-avldrums = callPackage ../applications/audio/x42-avldrums { };
