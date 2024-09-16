@@ -1,9 +1,10 @@
+#with import <nixpkgs> {};
 # This file contains all runtime glue: Bindings to optional runtime dependencies
 # for pdfSupport, presentationSupport, and media playback.
-{ lib, mkDerivation, wrapGAppsHook3, python3Packages
+{ lib, mkDerivation, wrapGAppsHook3, python3Packages, util-linux
 
 # qt deps
-, qtbase
+, qtwayland
 
 # optional deps
 , pdfSupport ? false
@@ -15,8 +16,17 @@
 }:
 
 let
+  # pdfSupport = true;
+  # presentationSupport = true;
+  # vlcSupport = true;
+  # qtwayland = qt5.qtwayland;
+
   # optional packages
   libreofficePath = "${libreoffice-unwrapped}/lib/libreoffice/program";
+
+  libraryPath = libreofficePath + ":" + lib.makeLibraryPath [
+    util-linux
+  ];
 
   # lib functions
   inherit (lib.lists) optional optionals;
@@ -34,7 +44,7 @@ in mkDerivation {
   inherit (baseLib) version src meta;
 
   nativeBuildInputs = [ python3Packages.wrapPython wrapGAppsHook3 ];
-  buildInputs = [ qtbase ];
+  buildInputs = [ qtwayland ];
   propagatedBuildInputs = optional pdfSupport pythonPackages.pymupdf
     ++ optional presentationSupport libreoffice-unwrapped;
   pythonPath = [ baseLib ] ++ optional vlcSupport pythonPackages.python-vlc;
@@ -45,7 +55,7 @@ in mkDerivation {
   PYTHONPATH = libreofficePath;
   URE_BOOTSTRAP = "vnd.sun.star.pathname:${libreofficePath}/fundamentalrc";
   UNO_PATH = libreofficePath;
-  LD_LIBRARY_PATH = libreofficePath;
+  LD_LIBRARY_PATH = libraryPath;#libreofficePath;
   JAVA_HOME = "${libreoffice-unwrapped.jdk.home}";
 
   dontWrapQtApps = true;
