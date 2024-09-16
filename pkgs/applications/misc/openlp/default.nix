@@ -4,7 +4,7 @@
 { lib, mkDerivation, wrapGAppsHook3, python3Packages, util-linux
 
 # qt deps
-, qtwayland
+, qtbase, wrapQtAppsHook
 
 # optional deps
 , pdfSupport ? false
@@ -19,7 +19,9 @@ let
   # pdfSupport = true;
   # presentationSupport = true;
   # vlcSupport = true;
-  # qtwayland = qt5.qtwayland;
+  # qtbase = qt5.qtbase;
+  # mkDerivation = stdenv.mkDerivation;
+  # wrapQtAppsHook = qt5.wrapQtAppsHook
 
   # optional packages
   libreofficePath = "${libreoffice-unwrapped}/lib/libreoffice/program";
@@ -43,8 +45,8 @@ in mkDerivation {
   pname = baseLib.pname + lib.optionalString (pdfSupport && presentationSupport && vlcSupport) "-full";
   inherit (baseLib) version src meta;
 
-  nativeBuildInputs = [ python3Packages.wrapPython wrapGAppsHook3 ];
-  buildInputs = [ qtwayland ];
+  nativeBuildInputs = [ python3Packages.wrapPython wrapGAppsHook3 wrapQtAppsHook ];
+  buildInputs = [ qtbase ];
   propagatedBuildInputs = optional pdfSupport pythonPackages.pymupdf
     ++ optional presentationSupport libreoffice-unwrapped;
   pythonPath = [ baseLib ] ++ optional vlcSupport pythonPackages.python-vlc;
