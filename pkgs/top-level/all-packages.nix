@@ -36460,8 +36460,6 @@ with pkgs;
 
   octopus = callPackage ../applications/science/chemistry/octopus { };
 
-<<<<<<< HEAD
-=======
   openlp = libsForQt5.callPackage ../applications/misc/openlp { };
   openlpFull = openlp.override {
     pdfSupport = true;
@@ -36469,7 +36467,6 @@ with pkgs;
     vlcSupport = true;
   };
 
->>>>>>> aa093aff1385 (openlp:  2.4.6 -> 3.1.2)
   autodock-vina = callPackage ../applications/science/chemistry/autodock-vina { };
 
   dkh = callPackage ../applications/science/chemistry/dkh { };
