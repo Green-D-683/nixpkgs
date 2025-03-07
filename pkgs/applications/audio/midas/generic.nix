@@ -1,11 +1,15 @@
 { stdenv, fetchurl, lib, libX11, libXext, alsa-lib, freetype, brand, type, version, homepage, url, sha256, extraMaintainters ? [], extraLibs ? [], ... }:
+let
+name = "${type}-Edit";
+in
 stdenv.mkDerivation rec {
-  pname = "${lib.toLower type}-edit";
+  pname = "${lib.toLower name}";
   inherit version;
 
   src = fetchurl {
     inherit url;
     inherit sha256;
+    postFetch = "ls";
   };
 
   sourceRoot = ".";
@@ -13,8 +17,20 @@ stdenv.mkDerivation rec {
   dontStrip = true;
 
   installPhase = ''
+    ls -a
     mkdir -p $out/bin
-    cp ${type}-Edit $out/bin/${pname}
+    cp ${name} $out/bin/${pname}
+    mkdir -p $out/share/icons
+    cp ${name}_icon.png $out/share/icons/${lib.toLower name}.png
+    mkdir -p $out/share/applications
+    cat <<INI > $out/share/applications/${name}.desktop
+        [Desktop Entry]
+        Terminal=false
+        Name=${name}
+        Exec=$out/bin/${pname}
+        Type=Application
+        Icon=${lib.toLower name}
+        INI
   '';
   preFixup = let
     # we prepare our library path in the let clause to avoid it become part of the input of mkDerivation
