@@ -11649,7 +11649,6 @@ with pkgs;
     haskellPackages.callPackage ../applications/misc/deadd-notification-center { }
   );
 
-  m32edit = callPackage ../applications/audio/midas/m32edit.nix { };
 
   manim = python3Packages.toPythonApplication python3Packages.manim;
 
@@ -13360,9 +13359,7 @@ with pkgs;
 
   x2gokdriveclient = libsForQt5.callPackage ../applications/networking/remote/x2gokdriveclient { };
 
-  x32edit = callPackage ../applications/audio/midas/x32edit.nix { };
 
-  xairedit = callPackage ../applications/audio/midas/xairedit.nix { };
 
   xbindkeys-config = callPackage ../tools/X11/xbindkeys-config {
     gtk = gtk2;

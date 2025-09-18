@@ -1,6 +1,6 @@
 { callPackage, ... }@args:
 
-callPackage ./generic.nix (
+callPackage ../../mi/midas-generic/generic.nix (
   args
   // rec {
     brand = "Midas";
