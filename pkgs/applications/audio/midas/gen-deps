@@ -1,4 +1,4 @@
 #!/bin/sh -eu
 cd "$(dirname "$0")"
-deps=$(nix-build --no-link -A x32edit.deps ../../../..)
+deps=$(nix-build --no-link -A xairedit.deps ../../../..)
 cat "$deps" > deps.nix

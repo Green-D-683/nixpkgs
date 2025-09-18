@@ -13362,6 +13362,8 @@ with pkgs;
 
   x32edit = callPackage ../applications/audio/midas/x32edit.nix { };
 
+  xairedit = callPackage ../applications/audio/midas/xairedit.nix { };
+
   xbindkeys-config = callPackage ../tools/X11/xbindkeys-config {
     gtk = gtk2;
   };

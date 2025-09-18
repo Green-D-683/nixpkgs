@@ -8,6 +8,7 @@
   homepage,
   url,
   hash,
+  deps ? [ ],
   runCommand,
   dpkg,
   vmTools,
@@ -20,7 +21,7 @@ let
     let
       debs = lib.flatten (import ./deps.nix { inherit fetchurl; });
     in
-    runCommand "x32edit-debian" { nativeBuildInputs = [ dpkg ]; } (
+    runCommand "${lib.strings.toLower type}edit-debian" { nativeBuildInputs = [ dpkg ]; } (
       lib.concatMapStringsSep "\n" (deb: ''
         dpkg-deb -x ${deb} $out
       '') debs
@@ -60,7 +61,7 @@ stdenv.mkDerivation rec {
       distro = vmTools.debDistros.debian12x86_64;
     in
     vmTools.debClosureGenerator {
-      name = "x32edit-dependencies";
+      name = "${lib.strings.toLower type}edit-dependencies";
       inherit (distro) urlPrefix;
       packagesLists = [ distro.packagesList ];
       packages = [
@@ -70,7 +71,8 @@ stdenv.mkDerivation rec {
         "libasound2"
         "libx11-6"
         "libxext6"
-      ];
+      ]
+      ++ deps;
     };
 
   meta = with lib; {
@@ -79,6 +81,9 @@ stdenv.mkDerivation rec {
     sourceProvenance = with sourceTypes; [ binaryNativeCode ];
     license = licenses.unfree;
     platforms = platforms.linux;
-    maintainers = [ maintainers.magnetophon ];
+    maintainers = [
+      maintainers.magnetophon
+      maintainers.Green-D-683
+    ];
   };
 }

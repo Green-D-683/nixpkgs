@@ -1,5 +1,5 @@
 # This is a generated file.  Do not modify!
-# Following are the Debian packages constituting the closure of: libstdc++6 libcurl4 libfreetype6 libasound2 libx11-6 libxext6
+# Following are the Debian packages constituting the closure of: libstdc++6 libcurl4 libfreetype6 libasound2 libx11-6 libxext6 libgl1
 
 { fetchurl }:
 
@@ -394,6 +394,331 @@
     (fetchurl {
       url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libx/libxext/libxext6_1.3.4-1+b1_amd64.deb";
       sha256 = "504b7be9d7df4f6f4519e8dd4d6f9d03a9fb911a78530fa23a692fba3058cba6";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libg/libglvnd/libglvnd0_1.6.0-1_amd64.deb";
+      sha256 = "b6da5b153dd62d8b5e5fbe25242db1fc05c068707c365db49abda8c2427c75f8";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libd/libdrm/libdrm-common_2.4.114-1_all.deb";
+      sha256 = "32f9664138b38b224383c6986457d5ad2ec8efd559b1a0ce7749405f7a451aad";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libd/libdrm/libdrm2_2.4.114-1+b1_amd64.deb";
+      sha256 = "be18fb670797ba32da9628cf3e8acd83160d8db8c8dd842501dd8e401c3b5371";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/e/expat/libexpat1_2.5.0-1_amd64.deb";
+      sha256 = "fe36a7f35361fc40d0057ef447a7302fd41d51740d51c98fb3870bbed5b96e56";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/m/mesa/libglapi-mesa_22.3.6-1+deb12u1_amd64.deb";
+      sha256 = "fda45e2e2980cc8fd8e12e401460a702e6f990952549adda5608c2f901c3199c";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libx/libx11/libx11-xcb1_1.8.4-2+deb12u1_amd64.deb";
+      sha256 = "e87c304053a6a319809f669feae030c41959de57f805149ce5a9d10d780d65cb";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libx/libxcb/libxcb-dri2-0_1.15-1_amd64.deb";
+      sha256 = "ef4959aa9e09a0d38d1de432e747585129d5d2dc1d84c8b6b3d2ffc3708b5805";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libx/libxcb/libxcb-dri3-0_1.15-1_amd64.deb";
+      sha256 = "02699b144b9467de8636d27a76984b8f4e7b66e2d25d96df2b9677be86ee9a29";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libx/libxcb/libxcb-glx0_1.15-1_amd64.deb";
+      sha256 = "1bce55fc292d93fa5f7fa50f84cef99ec29be70d0ffe98e86b8008e59f4a34fa";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libx/libxcb/libxcb-present0_1.15-1_amd64.deb";
+      sha256 = "89383e627a4d17b9390d609b2459481bfd2029566367b43068586769e418b6e5";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libx/libxcb/libxcb-randr0_1.15-1_amd64.deb";
+      sha256 = "f86e3d8ff8622871008833e9d064919b7a6237399c903c59fc330ff00f199ff5";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libx/libxcb/libxcb-shm0_1.15-1_amd64.deb";
+      sha256 = "c1afcef29dc78b95c475159b181b28b1dedaf1d5aa06efd2fa6d90c73bfbe0e5";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libx/libxcb/libxcb-sync1_1.15-1_amd64.deb";
+      sha256 = "3366ce715220d38dd0148b78a8e738137bade25ef7eec0698850c6f66800844f";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libx/libxcb/libxcb-xfixes0_1.15-1_amd64.deb";
+      sha256 = "d744a7ebad2cbcf301c96cd6a1ab3ee856e436fc7be5cff5b7c28ac2ac181a64";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libx/libxfixes/libxfixes3_6.0.0-2_amd64.deb";
+      sha256 = "1cd616396ff2ecae77e6e8b5b7695d414f0146de2d147837a2a02165f99e1a2c";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libx/libxshmfence/libxshmfence1_1.3-1_amd64.deb";
+      sha256 = "1a38142e40e3d32dc4f9a326bf5617363b7d9b4bb762fdcdd262f2192092024d";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libx/libxxf86vm/libxxf86vm1_1.1.4-1+b2_amd64.deb";
+      sha256 = "6f4ca916aaec26d7000fa7f58de3f71119309ab7590ce1f517abfe1825a676c7";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libd/libdrm/libdrm-amdgpu1_2.4.114-1+b1_amd64.deb";
+      sha256 = "b75a71e96f1faac0f131ac657e09efcbe8968eef62cc34b8abfcff2ff9f0cccd";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libp/libpciaccess/libpciaccess0_0.17-2_amd64.deb";
+      sha256 = "4025f3608cf431c163efb94fdc553e7b93e16b8f0d741ea87762e19025ffc80e";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libd/libdrm/libdrm-intel1_2.4.114-1+b1_amd64.deb";
+      sha256 = "b0e39318d14c07f4d85668b6da7f66a1341addf87a47d785c34d5a8b393f544c";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libd/libdrm/libdrm-nouveau2_2.4.114-1+b1_amd64.deb";
+      sha256 = "ba59bb9ec6e1baf59fc4d4eb095a524e40d045af2413dad9d28df517005388b6";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libd/libdrm/libdrm-radeon1_2.4.114-1+b1_amd64.deb";
+      sha256 = "2da3a9233187f995ad5a3e6db3d37252ea7209f0ca9605484d03478ebcc15feb";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/e/elfutils/libelf1_0.188-2.1_amd64.deb";
+      sha256 = "619add379c606b3ac6c1a175853b918e6939598a83d8ebadf3bdfd50d10b3c8c";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/n/ncurses/libtinfo6_6.4-4_amd64.deb";
+      sha256 = "072d908f38f51090ca28ca5afa3b46b2957dc61fe35094c0b851426859a49a51";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libe/libedit/libedit2_3.1-20221030-2_amd64.deb";
+      sha256 = "1cf14abf2716d3279db12d0657a5737cf70074a1e71d3bdf73206625e3c89ce6";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/i/icu/libicu72_72.1-3_amd64.deb";
+      sha256 = "e239c1c9f52bee0ff627f291552d63691b765ec7c5cdf6de7c7ae4dec0275857";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/x/xz-utils/liblzma5_5.4.1-0.2_amd64.deb";
+      sha256 = "d4b7736e58512a2b047f9cb91b71db5a3cf9d3451192fc6da044c77bf51fe869";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libx/libxml2/libxml2_2.9.14+dfsg-1.3~deb12u1_amd64.deb";
+      sha256 = "35b76cb7038fc1c940204a4f05f33ffb79d027353ce469397d9adcf8f9b3e1a7";
+      name = "libxml2_2.9.14+dfsg-1.3deb12u1_amd64.deb";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/z/z3/libz3-4_4.8.12-3.1_amd64.deb";
+      sha256 = "6221ca25ad5abcfbe1965801029d85a88b4775320384b4b716de8fab7a4d2f7a";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/l/llvm-toolchain-15/libllvm15_15.0.6-4+b1_amd64.deb";
+      sha256 = "9f0751109ba89e65b1313a4f3e34a29977a0db6fa30ed475e2c6bd555fa9e866";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/l/lm-sensors/libsensors-config_3.6.0-7.1_all.deb";
+      sha256 = "7f3c9fbd822858a9e30335e4a7f66c9468962eb26cd375b93bc8b789660bf02f";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/l/lm-sensors/libsensors5_3.6.0-7.1_amd64.deb";
+      sha256 = "b7eb91dce728fbb9203aec8b22637303b29821c3384e5f78a8ff348b4e44efe3";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/m/mesa/libgl1-mesa-dri_22.3.6-1+deb12u1_amd64.deb";
+      sha256 = "2c3fbfb89a8eadf6a82836b2443bc4d9578cb83847daf37cf6ab6074daf4fcda";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/m/mesa/libglx-mesa0_22.3.6-1+deb12u1_amd64.deb";
+      sha256 = "6d0da356b1aaf73f85233773bb41506cc84e4744aedc69ef1db92848956de621";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libg/libglvnd/libglx0_1.6.0-1_amd64.deb";
+      sha256 = "95f568df73dedf43ae66834a75502112e0d4f3ad7124f3dbfa790b739383b896";
+    })
+
+  ]
+
+  [
+
+    (fetchurl {
+      url = "https://snapshot.debian.org/archive/debian/20231124T031419Z/pool/main/libg/libglvnd/libgl1_1.6.0-1_amd64.deb";
+      sha256 = "6f89b1702c48e9a2437bb3c1ffac8e1ab2d828fc28b3d14b2eecd4cc19b2c790";
     })
 
   ]
